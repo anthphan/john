@@ -1,3 +1,15 @@
+/* custom props */
+:root {
+    --blue: #5281CE;
+    --purple: #998CEB;
+    --yellow: #E9D787;
+    --teal: #9EF5FF;
+    --green: #BAE8AC;
+    --tan: #F5F0E7;
+
+    --light-blue: #9DDCFF;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -59,4 +71,298 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+html {
+    background-color: var(--tan);
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: var(--tan);
+
+}  
+
+header, section {
+    margin: 0 auto;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    background-color: #FFFFFF;
+    padding: 50px 6em;
+    max-width: 1600px;
+}
+
+.nav__bar {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav__logo {
+    text-align: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.nav__links {
+    margin-left: auto;
+}
+
+nav ul, .footer__nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1em;
+}
+
+.nav__link {    
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: none;
+    color: #000;
+}
+
+.current {
+    font-weight: 800;
+    background-image: linear-gradient(transparent 0%, transparent 50%, var(--light-blue) 50%, var(--light-blue) 100%);
+    background-size: 100% 100%; /* Adjust background size to cover half of the height */
+    background-repeat: no-repeat;
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    height: 600px;
+    margin: 0 auto;
+}
+  
+.hero__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    max-width: 40%;
+}
+
+.hero__img img {
+    width: 60%;
+    height: auto;
+}
+
+.hero__info {
+    flex: 1;
+    padding-left: 20px;
+    max-width: 60%; /* Adjust max-width instead of width */
+}
+
+.hero__info h1 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 10px; /* Add some space between the headings */
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 8em;
+}
+
+.work__container {
+    max-width: 1000px;
+}
+
+.work__title {
+    font-size: 36px;
+    font-weight: 800;
+    align-self: flex-start;
+    margin-bottom: 100px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 125px;
+}
+
+.project__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 459px; /* Set the height of the parent container */
+    position: relative; /* Add relative positioning */
+}
+
+.img__dummy {
+    width: 100%;
+    height: 100%;
+    max-width: 1338px;
+    border-radius: 10px;
+    border: 3px solid #000000;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.project1 .img__dummy {
+    box-shadow: 10px 10px 0px var(--green); /* Use green drop shadow for project 1 */
+}
+
+.project2 .img__dummy {
+    box-shadow: 10px 10px 0px var(--yellow); /* Use blue drop shadow for project 2 */
+}
+
+.project3 .img__dummy {
+    box-shadow: 10px 10px 0px var(--purple); /* Use purple drop shadow for project 3 */
+}
+
+
+.project__info {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.project__header{
+    align-self: flex-start;
+    border-radius: 5px;
+}
+
+.project__header h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.project1 .project__header {
+    background-color: var(--green);
+}
+
+.project2 .project__header {
+    background-color: var(--yellow);
+}
+
+.project3 .project__header {
+    background-color: var(--purple);
+}
+
+
+.project__description p {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+.project__btn {
+    align-self: flex-start;
+}
+
+.project__btn button, .about__btn button{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.project1 button {
+    box-shadow: 8px 8px 0px var(--green);
+    transition: box-shadow 0.3s;
+}
+
+.project2 button {
+    box-shadow: 8px 8px 0px var(--yellow);
+    transition: box-shadow 0.3s;
+}
+
+.project3 button {
+    box-shadow: 8px 8px 0px var(--purple);
+    transition: box-shadow 0.3s;
+}
+
+/* Hover effect */
+.project1 button:hover {
+    box-shadow: 6px 6px 0px var(--green);
+}
+.project2 button:hover {
+    box-shadow: 6px 6px 0px var(--yellow);
+}
+
+.project3 button:hover {
+    box-shadow: 6px 6px 0px var(--purple);
+}
+
+footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    height: 100px;
+} 
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    height: 100%;
+}
+
+.footer__link {
+    font-weight: 800;
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.footer__nav li {
+    margin: 0 40px;
+}
+
+/* about */
+
+.about {
+    display: flex;
+    padding-bottom: 40px;
+    gap: 20px;
+}
+
+.about__img {
+    flex: 0 0 30%; 
+}
+
+.about__img img {
+    width: 100%;
+}
+
+.about__info {
+    flex: 0 0 70%; 
+}
+
+.about_header h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.about__desc {
+    font-size: 18px;
+    font-weight: 400;
 }

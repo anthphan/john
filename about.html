@@ -4,59 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>john tran</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <div class="container">
-        <h1>john tran</h1>
-        <nav>
-          <ul>
-            <li><a href="#">work</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">resume</a></li>
-          </ul>
-        </nav>
+      <div class="nav__bar">
+        <div class="nav__logo">
+          <h1 class="logo">john tran</h1>
+        </div>
+        <div class="nav__links">
+          <nav>
+            <ul>
+              <li><a href="index.html" class="nav__link">work</a></li>
+              <li><a href="#" class="nav__link current">about</a></li>
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1VDPi7KAYnjrqklYrYXYxKw0mbGAvK7iO/view"
+                  class="nav__link"
+                  >resume</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
     <section class="about">
-      <div class="container">
-        butt
-        <div class="hero">
-          <div class="hero__img"></div>
-          <div class="hero__info">
-            <h1>Nice to meet you! 👋</h1>
-            <p>
-              Hello! I'm John, a product designer working remotely with Magnet
-              Forensics.
-            </p>
-            <p>
-              I started my design journey with a paint brush and canvas then
-              eventually moved to a trackpad and cursor. I wanted to combine my
-              passion of problem solving with my background in visual arts, and
-              design is the perfect forefront. Product design challenges me at
-              the intersection of business, design, strategy, and accessibility
-            </p>
-            <p>
-              I enjoy challenging myself to grow my experiences as a designer,
-              strategist, and problem solver, especially in cross-disciplinary
-              environments where we can grow together!
-            </p>
-            <button>view resume</button>
-          </div>
+      <div class="about__img">
+        <img src="images/john.png" alt="" />
+      </div>
+      <div class="about__info">
+        <div class="about_header">
+          <h1>Nice to meet you! 👋</h1>
+        </div>
+        <div class="about__desc">
+          <p>
+            Hello! I'm John, a product designer working remotely with Magnet
+            Forensics.
+          </p>
+          <p>
+            I started my design journey with a paint brush and canvas then
+            eventually moved to a trackpad and cursor. I wanted to combine my
+            passion of problem solving with my background in visual arts, and
+            design is the perfect forefront. Product design challenges me at the
+            intersection of business, design, strategy, and accessibility
+          </p>
+          <p>
+            I enjoy challenging myself to grow my experiences as a designer,
+            strategist, and problem solver, especially in cross-disciplinary
+            environments where we can grow together!
+          </p>
+        </div>
+        <div class="about__btn">
+          <button>view resume</button>
         </div>
       </div>
     </section>
 
     <footer>
-      <div class="container">
+      <div class="footer__container">
         <div class="footer__logo">
-          <h1>john tran</h1>
+          <h1 class="logo">john tran</h1>
         </div>
-        <div class="footer_nav">
+        <div class="footer__nav">
           <ul>
-            <li><a href="">tran.johnvan@gmail.com</a></li>
-            <li><a href="">linkedin</a></li>
+            <li><a href="" class="footer__link">tran.johnvan@gmail.com</a></li>
+            <li><a href="" class="footer__link">linkedin</a></li>
           </ul>
         </div>
       </div>
