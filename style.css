@@ -101,11 +101,11 @@ section {
 header {
     position: fixed;
     background-color: #FFFFFF;
-    z-index: 99; 
     left: 0;
     right: 0;
     margin: 0 auto;
     padding: 25px 40px;
+    z-index: 10;
 }
 
 .nav__bar {
@@ -119,8 +119,7 @@ header {
 .logo {
     font-weight: 800;
     font-size: 36px;
-    margin-right: auto;
-    margin-left: 40px; 
+    padding: 0;
 }
   
 nav ul, .footer__nav ul {
@@ -169,6 +168,10 @@ nav li {
     height: 100%;
 }
 
+img {
+    z-index: 1;
+}
+
 .hero__img img {
     width: 100%;
     height: auto;
@@ -191,12 +194,18 @@ nav li {
     align-items: center;
 }
 
-.work__title{
+.work__title {
     font-size: 36px;
     font-weight: 800;
     align-self: flex-start;
     margin-bottom: 50px;
-    margin-top: 100px;
+}
+
+.back {
+    font-size: 36px;
+    font-weight: 800;
+    align-self: flex-start;
+    margin: 1em 0;
 }
 
 .project {
@@ -226,7 +235,7 @@ nav li {
     align-self: flex-start;
 }
 
-.project__header, .work__title a {
+.project__header, .work__title a, .back a {
     align-self: flex-start;
     border-radius: 5px;
     margin-top: 50px;
@@ -248,15 +257,15 @@ nav li {
 }
 
 
-.project1 .project__header, .project1 .work__title a {
+.project1 .project__header, .project1 .back a {
     background-color: var(--green);
 }
 
-.project2 .project__header, .project2 .work__title a {
+.project2 .project__header, .project2 .back a {
     background-color: var(--yellow);
 }
 
-.project3 .project__header, .project3 .work__title a {
+.project3 .project__header, .project3 .back a {
     background-color: var(--light-blue);
 }
 
@@ -426,12 +435,12 @@ footer {
 }
 
 /* about me */ 
-.work__title a, .logo a{
+.back a, .logo a{
     text-decoration: none;
     color: black;
 }
 
-.work__title {
+.back {
     position: -webkit-sticky;
     position: sticky;
     z-index: 9999;
@@ -450,7 +459,6 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding-bottom: 140px;
     gap: 20px;
 }
   
@@ -480,7 +488,6 @@ footer {
 
 .about__btn button {
     box-shadow: 8px 8px 0px var(--light-blue);
-    transition: box-shadow 0.3s;
 }
 
 .about__btn button:hover {
@@ -491,7 +498,7 @@ footer {
     color: #FFFFFF;
 }
 
-.logo a:hover, .nav__link:hover, .footer__link:hover {
+.nav__link:hover, .footer__link:hover {
     color: var(--blue);
 }
 
@@ -508,14 +515,21 @@ footer {
     margin-top: 0;
     margin-bottom: 100px;
     position: relative;
-    z-index: 0;
+    z-index: 0
 }
 
-  
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     body {
         font-size: 14px; /* Smaller font size for smaller screens */
+    }
+
+    header, section {
+        padding: 25px;
+    }
+
+    .logo {
+        padding-left: 40px; 
     }
 
     .nav__bar {
@@ -523,7 +537,7 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 1em 0;
+        padding: 0;
     }
 
     .hamburger__menu {
@@ -534,17 +548,15 @@ footer {
         width: 40px;
         height: 40px;
         cursor: pointer;
-        margin-left: auto; /* Move the hamburger menu to the right */
     }
 
-    /* Style the bars for the hamburger menu */
     .bar {
-        width: 30px; /* Adjust the width of the bars */
-        height: 3px; /* Adjust the height of the bars */
+        width: 30px; 
+        height: 3px; 
         background-color: #000;
         transition: transform 0.3s ease;
-        border-radius: 2px; /* Add rounded corners to the bars */
-        margin: 4px 0; /* Add spacing between the bars */
+        border-radius: 2px;
+        margin: 4px auto; 
     }
 
     .hamburger__menu.active .bar:nth-child(1) {
@@ -556,50 +568,132 @@ footer {
     }
 
     .nav__links {
-        display: none;
         position: fixed;
-        top: -100%; /* Start with the nav links off-screen */
+        top: -100%;
         left: 0;
         height: auto;
         background-color: #FFFFFF;
         width: 100%;
-        z-index: 1000;
-        transition: 0.8s; /* Transition the top property for sliding effect */
         border-top: 3px solid #000000;
         border-bottom: 3px solid #000000;
-    }
-
-    .logo a:hover, .nav__link:hover, .footer__link:hover {
-        color: black;
+        transition: all 0.3s ease-in-out;
+        z-index: 9999;
     }
     
     .nav__links.show {
-        top: 120px; /* Slide down from the top */
-        display: block;
+        top: 100px;
     }
 
-    .work__project, .about {
-        padding-top: 150px;
-    }
-
-    .work__title {
+    .back {
         display: none;
+    }
+
+    footer .logo {
+        padding-left: 0; 
+    }
+
+    .work, .work__project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8em 4em;
+    }
+
+    .about {
+        padding: 8em 4em;
     }
     
 }
 
-/* Media query for medium devices */
-@media screen and (min-width: 601px) and (max-width: 1199px){
+@media (min-width: 600px) {
     body {
-        font-size: 18px; /* Larger font size for medium screens */
+        font-size: 14px; /* Smaller font size for smaller screens */
+    }
+
+    .logo {
+        padding-left: 40px;
+    }
+
+    header, section {
+        padding: 25px;
+    }
+
+    .nav__bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .hamburger__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 30px; 
+        height: 3px; 
+        background-color: #000;
+        transition: transform 0.3s ease;
+        border-radius: 2px;
+        margin: 4px auto; 
+    }
+
+    .hamburger__menu.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px); /* Adjust the rotation and translation values */
+    }
+
+    .hamburger__menu.active .bar:nth-child(2) {
+        transform: rotate(-45deg) translate(4px, -4px); /* Adjust the rotation and translation values */
+    }
+
+    .nav__links {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        height: auto;
+        background-color: #FFFFFF;
+        width: 100%;
+        border-top: 3px solid #000000;
+        border-bottom: 3px solid #000000;
+        transition: all 0.3s ease-in-out;
     }
     
+    .nav__links.show {
+        top: 100px;
+        z-index: 1;
+    }
+
+    .back {
+        display: none;
+    }
+
+    footer .logo {
+        padding-left: 0; 
+    }
+
+    .work, .work__project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8em 4em;
+    }
+
+    .about {
+        padding: 8em 4em;
+    }
+
+}
+
+@media (min-width: 768px) {
     header, section {
-        margin: 0 4em;
-        border-left: 3px solid black;
-        border-right: 3px solid black;
-        background-color: #FFFFFF;
-        padding: 1em 4em
+        padding: 25px;
     }
 
     nav {
@@ -607,6 +701,80 @@ footer {
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    .hamburger__menu, #myBtn {
+        display: none;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .nav__links {
+        display: block;
+        position: static; /* Reset the position */
+        top: auto; /* Reset the top property */
+        width: auto; /* Reset the width */
+        border: none; /* Reset the border */
+        background-color: transparent; /* Reset the background color */
+        transition: none; /* Remove transition */
+    }
+
+
+    nav ul, .footer__nav ul {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+    }
+
+    nav li {
+        margin: 0;
+        padding: 0 .8em;
+    }
+
+    .preview .img__project img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 400px; 
+        position: relative;
+    }
+
+    #myBtn {
+        visibility: hidden;
+    }
+
+    .work, .work__project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8em 4em;
+    }
+
+    .about {
+        padding: 8em 4em;
+    }
+}
+
+
+/* Media query for medium devices */
+@media (min-width: 992px) {
+    body {
+        font-size: 18px; /* Larger font size for medium screens */
+    }
+    
+    .logo {
+        padding-left: 0;
+    }
+
+    header, section {
+        margin: 0 4em;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+        background-color: #FFFFFF;
+        padding: 25px;
     }
     
     .nav__logo {
@@ -618,7 +786,6 @@ footer {
     .logo {
         font-weight: 800;
         font-size: 36px;
-        width: 200px;
         margin: 0 auto;
     }
     
@@ -635,8 +802,15 @@ footer {
         text-decoration: none;
         color: #000;
     }
+
+    nav {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     
-    .hamburger__menu {
+    .hamburger__menu, #myBtn {
         display: none;
     }
 
@@ -659,7 +833,7 @@ footer {
 
     nav li {
         margin: 0;
-        padding: 0 .5em;
+        padding: 0 .8em;
     }
 
     .preview .img__project img {
@@ -682,10 +856,21 @@ footer {
         padding-top: 67px;
         padding-bottom: 40px;
     }
+
+    .work, .work__project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6em 6em;
+    }
+
+    .about {
+        padding: 8em 4em;
+    }
 }
 
 /* desktop styles */
-@media screen and (min-width: 1200px)  {
+@media (min-width: 1200px) {
     header, section {
         margin: 0 8em;
         border-left: 3px solid black;
@@ -698,14 +883,6 @@ footer {
         margin: 0 8em;
     }
     
-    
-    nav {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
     .nav__logo {
         flex: 1;
         text-align: center;
@@ -715,8 +892,8 @@ footer {
     .logo {
         font-weight: 800;
         font-size: 36px;
-        width: 200px;
         margin: 0 auto;
+        padding-left: 0;
     }
     
     
@@ -748,7 +925,7 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 25px 2em; 
+        padding: 25px 0; 
     }
       
     .hero__img {
@@ -779,17 +956,20 @@ footer {
         margin-bottom: 10px; 
     }
     
-    .work, .work__project, .about {
+    .work, .work__project {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 25px 8em; 
+        padding: 3em 8em; 
+    }
+
+    .about {
+        padding: 10em 4em; 
     }
     
     .work__container, .hero__container {
         max-width: 1200px; 
     }
-    
     
     .project {
         display: flex;
@@ -1001,13 +1181,9 @@ footer {
     }
     
     /* about me */ 
-    .work__title a, .logo a{
+    .back a, .logo a{
         text-decoration: none;
         color: black;
-    }
-    
-    .about__container {
-        max-width: 1200px;
     }
     
     .about__me {
@@ -1016,25 +1192,15 @@ footer {
       
     .about__img {
         display: flex;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
         flex: 1;
         height: 100%;
         max-width: 40%;
     }
     
-    
     .about__info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding-left: 10px;
-        max-width: 60%; /* Adjust max-width instead of width */
-    }
-    
-    .about__img h1 {
-        font-weight: 700;
-        font-size: 40px;
+        max-width: 60%;
     }
     
     .about__header {
@@ -1043,18 +1209,8 @@ footer {
     }
     
     .about__description {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
-        padding-bottom: 20px;
-    }
-    
-    .about__btn button {
-        box-shadow: 8px 8px 0px var(--light-blue);
-        transition: box-shadow 0.3s;
-    }
-    
-    .about__btn button:hover {
-        box-shadow: 6px 6px 0px var(--dark-teal);
     }
     
     .footer__logo a {
@@ -1065,13 +1221,17 @@ footer {
         color: var(--blue);
     }
     
-    
     .preview .img__project img {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 460px; 
+        position: relative;
+    }
+
+    #myBtn {
+        display: none;
         position: relative;
     }
     
