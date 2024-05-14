@@ -316,9 +316,8 @@ img {
     display: flex;
 }
 
-/* General hover state for all buttons */
 .project__btn button:hover, .about__btn button:hover, .view__project button:hover, #myBtn:hover {
-    transform: translate(2px, 4px); /* Move right and down */
+    transform: translate(2px, 4px);
 }
 
 .project1 button {
@@ -326,7 +325,7 @@ img {
 }
 
 .project1 button:hover {
-    box-shadow: 4px 4px 0px var(--dark-green); /* Smaller and darker shadow */
+    box-shadow: 4px 4px 0px var(--dark-green);
 }
 
 .project2 button {
@@ -537,10 +536,6 @@ footer {
 
 .footer__logo a {
     color: #FFFFFF;
-}
-
-.nav__link:hover, .footer__link:hover {
-    color: var(--blue);
 }
 
 .preview .img__project img {
@@ -834,6 +829,10 @@ footer {
     .arrow {
         display: none;
     }
+
+    .nav__link:hover, .logo a:hover, .footer__link:hover {
+        color: var(--blue);
+    }
 }
 
 
@@ -949,6 +948,10 @@ footer {
 
     .arrow {
         display: none;
+    }
+
+    .nav__link:hover, .logo a:hover, .footer__link:hover {
+        color: var(--blue);
     }
 }
 
@@ -1292,5 +1295,9 @@ footer {
 
     .arrow {
         display: none;
+    }
+
+    .nav__link:hover, .logo a:hover, .footer__link:hover {
+        color: var(--blue);
     }
 }
