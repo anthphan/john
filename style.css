@@ -422,6 +422,11 @@ footer {
     padding: 1em;
 }
 
+.project__img .our-2 {
+    background-color: #9DDCFF;
+    padding: 1em;
+}
+
 .project__img img {
     width: 100%;
     height: 100%;
@@ -660,7 +665,7 @@ footer {
     }
 
     .about {
-        padding: 8em 2em;
+        padding: 4em 2em;
     }
 
     .view__buttons {
@@ -742,16 +747,13 @@ footer {
         padding-left: 0; 
     }
 
-    .work, .work__project {
+    .work, .work__project, .about{
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 4em 4em;
     }
 
-    .about {
-        padding: 8em 4em;
-    }
 
 }
 
@@ -810,15 +812,11 @@ footer {
         visibility: hidden;
     }
 
-    .work, .work__project {
+    .work, .work__project, .about {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 4em 4em;
-    }
-
-    .about {
-        padding: 8em 4em;
     }
 
     .view__buttons {
@@ -938,15 +936,11 @@ footer {
         padding-bottom: 40px;
     }
 
-    .work, .work__project {
+    .work, .work__project, .about {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 4em 6em;
-    }
-
-    .about {
-        padding: 8em 4em;
     }
 
     .word {
@@ -1049,15 +1043,11 @@ footer {
         margin-bottom: 10px; 
     }
     
-    .work, .work__project {
+    .work, .work__project, .about {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 4em 8em; 
-    }
-
-    .about {
-        padding: 10em 4em; 
+        padding: 4em 6em; 
     }
     
     .work__container, .hero__container {
@@ -1132,6 +1122,7 @@ footer {
         text-decoration: none;
         border: 2px solid #000000;
         border-radius: 10px;
+        color: #000000;
         background-color: #FFFFFF;
         cursor: pointer;
         transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border-color 0.3s;
