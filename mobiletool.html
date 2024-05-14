@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Tran</title>
+    <title>john tran</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,17 +44,22 @@
     <section class="work__project">
       <div class="work__container__project project2">
         <h1 class="back">
-          <a href="javascript:history.back()"><- back</a>
+          <a href="javascript:history.back()" class="word"><- back</a>
+          <a href="javascript:history.back()" class="arrow"><-</a>
         </h1>
         <button onclick="topFunction()" id="myBtn" title="Go to top">
           top
         </button>
         <div class="project">
-          <a href="mobiletool.html" class="project__img preview">
+          <div class="project__img preview">
             <div class="img__project">
-              <img src="./images/mobile/mobile-main.png" alt="" />
+              <img
+                src="./images/mobile/mobile-main.png"
+                alt=""
+                class="fullscreen-image"
+              />
             </div>
-          </a>
+          </div>
           <div class="project__info">
             <div class="project__header-2">
               <h2>Mobile Inspection Tool</h2>
@@ -173,8 +178,12 @@
               <h2>Our User</h2>
             </div>
             <div class="project__img">
-              <div class="img__project">
-                <img src="./images/mobile/mobile-research.png" alt="" />
+              <div class="img__project our">
+                <img
+                  src="./images/mobile/mobile-our-user.png"
+                  alt=""
+                  class="fullscreen-image"
+                />
               </div>
             </div>
 
@@ -197,7 +206,11 @@
             </div>
             <div class="project__img">
               <div class="img__project">
-                <img src="./images/mobile/mobile-flow.png" alt="" />
+                <img
+                  src="./images/mobile/mobile-flow.png"
+                  alt=""
+                  class="fullscreen-image"
+                />
               </div>
             </div>
 
@@ -216,8 +229,7 @@
                 prioritized clarity in navigation, aiming to eliminate the need
                 for extensive onboarding and enabling users to feel familiar and
                 comfortable with the experience from the outset.
-                <br />
-                <br />
+                <br /><br />
                 Furthermore, these wireframes served as invaluable tools during
                 our research discussions, providing a visual reference point to
                 elucidate design concepts and gather feedback. Additionally,
@@ -225,6 +237,18 @@
                 assess user interactions and iteratively refine the interface to
                 enhance overall usability and satisfaction.
               </p>
+            </div>
+
+            <div class="multiple__images">
+              <div class="project__img">
+                <div class="img__project">
+                  <img
+                    src="./images/mobile/mobile-wireframe.jpeg"
+                    alt=""
+                    class="fullscreen-image"
+                  />
+                </div>
+              </div>
             </div>
 
             <div class="project__header-2">
@@ -244,8 +268,7 @@
                 phase. Being on-site with appraisers during the beta test
                 allowed us to observe their behaviours firsthand, transforming
                 their insights into valuable lessons for our team.
-                <br />
-                <br />
+                <br /><br />
                 This endeavour marked my debut as a mobile application creator,
                 assuming the roles of both product designer and product manager
                 within our team. This experience provided an invaluable
@@ -260,7 +283,6 @@
                   <button>view prototype</button>
                 </a>
               </div>
-
               <div class="view__project">
                 <a href="sepr8.html">
                   <button>view product</button>
@@ -268,9 +290,20 @@
               </div>
             </div>
 
-            <div class="project__img">
-              <div class="img__project">
-                <img src="./images/mobile/mobile-final.png" alt="" />
+            <div id="fullscreen-overlay">
+              <span id="close-button">&times;</span>
+              <img id="fullscreen-image" src="" alt="Fullscreen Image" />
+            </div>
+
+            <div class="multiple__images">
+              <div class="project__img">
+                <div class="img__project">
+                  <img
+                    src="./images/mobile/mobile-final.png"
+                    alt=""
+                    class="fullscreen-image"
+                  />
+                </div>
               </div>
             </div>
           </div>

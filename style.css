@@ -86,7 +86,7 @@ html {
 
 body {
     font-family: "Nunito", sans-serif;
-    background-color: var(--tan);
+    background-color: #FFFFFF;
     font-size: 16px;
 }  
 
@@ -215,6 +215,9 @@ img {
     padding-bottom: 100px;
 }
 
+.word {
+    width: 130px;
+}
 
 .project1 .img__dummy, .project1 .card__content, .project1 .project__img{
     box-shadow: 10px 10px 0px var(--green); /* Use green drop shadow for project 1 */
@@ -262,13 +265,14 @@ img {
     right: 15px;
     font-size: 25px;
     font-weight: 700;
-    padding: 2px 12px;
+    padding: 2px 14px;
     text-decoration: none;
     border: 2px solid #000000;
     border-radius: 10px;
     background-color: #FFFFFF;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border-color 0.3s;
+    z-index: 999;
 }
 
 
@@ -308,6 +312,10 @@ img {
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border-color 0.3s;
 }
 
+.view__buttons {
+    display: flex;
+}
+
 /* General hover state for all buttons */
 .project__btn button:hover, .about__btn button:hover, .view__project button:hover, #myBtn:hover {
     transform: translate(2px, 4px); /* Move right and down */
@@ -335,6 +343,14 @@ img {
 
 .project3 button:hover {
     box-shadow: 4px 4px 0px var(--dark-teal); /* Smaller and darker shadow */
+}
+
+.project4 button {
+    box-shadow: 8px 8px 0px var(--purple);
+}
+
+.project4 button:hover {
+    box-shadow: 4px 4px 0px var(--dark-purple); /* Smaller and darker shadow */
 }
 
 footer {
@@ -401,6 +417,11 @@ footer {
     padding: 2px;
 }
 
+.project__img .our {
+    background-color: #FFEB8C;
+    padding: 1em;
+}
+
 .project__img img {
     width: 100%;
     height: 100%;
@@ -439,9 +460,9 @@ footer {
 
 .view__buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding-top: 50px;
     padding-bottom: 70px;
 }
 
@@ -517,7 +538,6 @@ footer {
     color: var(--blue);
 }
 
-
 .preview .img__project img {
     display: flex;
     justify-content: center;
@@ -532,6 +552,30 @@ footer {
     position: relative;
     z-index: 0
 }
+
+#fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.5s; /* Add smooth transition for zoom effect */
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
 
 
 @media (max-width: 600px) {
@@ -599,7 +643,7 @@ footer {
         top: 100px;
     }
 
-    .back {
+    .word {
         display: none;
     }
 
@@ -611,7 +655,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 8em 2em;
+        padding: 4em 2em;
         padding-bottom: 2em;
     }
 
@@ -619,30 +663,10 @@ footer {
         padding: 8em 2em;
     }
 
-    #fullscreen-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
+    .view__buttons {
+        flex-direction: column;
+        gap: 40px;
     }
-    
-    #fullscreen-image {
-        max-width: 90%;
-        max-height: 90%;
-    }
-
-    
-
-    .no-scroll {
-        overflow: hidden;
-    }
-    
 }
 
 @media (min-width: 600px) {
@@ -710,7 +734,7 @@ footer {
         z-index: 1;
     }
 
-    .back {
+    .word {
         display: none;
     }
 
@@ -722,7 +746,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 8em 4em;
+        padding: 4em 4em;
     }
 
     .about {
@@ -743,7 +767,7 @@ footer {
         transform: translateY(-50%);
     }
 
-    .hamburger__menu, #myBtn {
+    .hamburger__menu {
         display: none;
     }
 
@@ -790,11 +814,27 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 8em 4em;
+        padding: 4em 4em;
     }
 
     .about {
         padding: 8em 4em;
+    }
+
+    .view__buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+
+    .word {
+        display: block;
+    }
+
+    .arrow {
+        display: none;
     }
 }
 
@@ -803,6 +843,7 @@ footer {
 @media (min-width: 992px) {
     body {
         font-size: 18px; /* Larger font size for medium screens */
+        background-color: var(--tan);
     }
     
     .logo {
@@ -901,16 +942,28 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 6em 6em;
+        padding: 4em 6em;
     }
 
     .about {
         padding: 8em 4em;
     }
+
+    .word {
+        display: block;
+    }
+
+    .arrow {
+        display: none;
+    }
 }
 
 /* desktop styles */
 @media (min-width: 1200px) {
+    body {
+        background-color: var(--tan);
+    }
+
     header, section {
         margin: 0 8em;
         border-left: 3px solid black;
@@ -1000,7 +1053,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 3em 8em; 
+        padding: 4em 8em; 
     }
 
     .about {
@@ -1083,36 +1136,7 @@ footer {
         cursor: pointer;
         transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border-color 0.3s;
     }
-    
-    /* General hover state for all buttons */
-    .project__btn button:hover, .about__btn button:hover, .view__project button:hover {
-        transform: translate(2px, 4px); /* Move right and down */
-    }
-    
-    .project1 button {
-        box-shadow: 8px 8px 0px var(--green);
-    }
-    
-    .project1 button:hover {
-        box-shadow: 4px 4px 0px var(--dark-green); /* Smaller and darker shadow */
-    }
-    
-    .project2 button {
-        box-shadow: 8px 8px 0px var(--yellow);
-    }
-    
-    .project2 button:hover {
-        box-shadow: 4px 4px 0px var(--dark-yellow); /* Smaller and darker shadow */
-    }
-    
-    .project3 button {
-        box-shadow: 8px 8px 0px var(--light-blue);
-    }
-    
-    .project3 button:hover {
-        box-shadow: 4px 4px 0px var(--dark-teal); /* Smaller and darker shadow */
-    }
-    
+
     footer {
         background-color: #000000;
         color: #FFFFFF;
@@ -1257,10 +1281,6 @@ footer {
         color: #FFFFFF;
     }
     
-    .logo a:hover, .nav__link:hover, .footer__link:hover {
-        color: var(--blue);
-    }
-    
     .preview .img__project img {
         display: flex;
         justify-content: center;
@@ -1275,4 +1295,11 @@ footer {
         position: relative;
     }
     
+    .word {
+        display: block;
+    }
+
+    .arrow {
+        display: none;
+    }
 }

@@ -44,17 +44,22 @@
     <section class="work__project">
       <div class="work__container__project project3">
         <h1 class="back">
-          <a href="javascript:history.back()"><- back</a>
+          <a href="javascript:history.back()" class="word"><- back</a>
+          <a href="javascript:history.back()" class="arrow"><-</a>
         </h1>
         <button onclick="topFunction()" id="myBtn" title="Go to top">
           top
         </button>
         <div class="project">
-          <a href="geenees.html" class="project__img preview">
+          <div class="project__img preview">
             <div class="img__project">
-              <img src="./images/geenees/Geenees-preview.png" alt="" />
+              <img
+                src="./images/geenees/Geenees-main.png"
+                alt=""
+                class="fullscreen-image"
+              />
             </div>
-          </a>
+          </div>
           <div class="project__info">
             <div class="project__header-2">
               <h2>Geenees Donor Platform</h2>
@@ -167,7 +172,11 @@
             </div>
             <div class="project__img">
               <div class="img__project">
-                <img src="./images/geenees/geenees-research.png" alt="" />
+                <img
+                  src="./images/geenees/geenees-research.png"
+                  alt=""
+                  class="fullscreen-image"
+                />
               </div>
             </div>
 
@@ -190,7 +199,11 @@
             </div>
             <div class="project__img">
               <div class="img__project">
-                <img src="./images/geenees/geenees-flow.jpeg" alt="" />
+                <img
+                  src="./images/geenees/geenees-flow.jpeg"
+                  alt=""
+                  class="fullscreen-image"
+                />
               </div>
             </div>
 
@@ -218,7 +231,11 @@
             </div>
             <div class="project__img">
               <div class="img__project">
-                <img src="./images/geenees/geenees-wireframes.png" alt="" />
+                <img
+                  src="./images/geenees/geenees-wireframes.png"
+                  alt=""
+                  class="fullscreen-image"
+                />
               </div>
             </div>
 
@@ -255,9 +272,18 @@
               </div>
             </div>
 
+            <div id="fullscreen-overlay">
+              <span id="close-button">&times;</span>
+              <img id="fullscreen-image" src="" alt="Fullscreen Image" />
+            </div>
+
             <div class="project__img">
               <div class="img__project">
-                <img src="./images/geenees/geenees-final.png" alt="" />
+                <img
+                  src="./images/geenees/geenees-final.png"
+                  alt=""
+                  class="fullscreen-image"
+                />
               </div>
             </div>
           </div>
