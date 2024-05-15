@@ -1235,7 +1235,8 @@ footer {
     }
     
     .view__project button{
-        width: 210px;
+        max-width: 240px;
+        width: auto;
     }
     
     /* about me */ 
