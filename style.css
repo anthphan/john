@@ -81,7 +81,7 @@ h6 {
 }
 
 html {
-    background-color: var(--tan);
+    background-color: #FFFFFF;
 }
 
 body {
@@ -204,6 +204,7 @@ img {
 .back {
     font-size: 36px;
     font-weight: 800;
+    width: 100px;
     align-self: flex-start;
     margin: 1em 0;
 }
@@ -352,6 +353,10 @@ img {
     box-shadow: 4px 4px 0px var(--dark-purple); /* Smaller and darker shadow */
 }
 
+.nav__link:hover, .logo a:hover, .footer__link:hover {
+    color: var(--blue);
+}
+
 footer {
     background-color: #000000;
     color: #FFFFFF;
@@ -484,10 +489,14 @@ footer {
     position: -webkit-sticky;
     position: sticky;
     z-index: 10;
-    width: 300px;
-    top: 25px;
+    top: 35px;
+    font-weight: 800;
+    font-size: 24px;
 }
 
+.word {
+    width: 90px;
+}
 
 .about__container {
     max-width: 1200px;
@@ -576,7 +585,9 @@ footer {
     overflow: hidden;
 }
 
-
+button {
+    color: black
+}
 
 @media (max-width: 600px) {
     body {
@@ -635,7 +646,7 @@ footer {
         width: 100%;
         border-top: 3px solid #000000;
         border-bottom: 3px solid #000000;
-        transition: all 0.3s ease-in-out;
+        transition: 0.3s;
         z-index: 9999;
     }
     
@@ -726,7 +737,7 @@ footer {
         width: 100%;
         border-top: 3px solid #000000;
         border-bottom: 3px solid #000000;
-        transition: all 0.3s ease-in-out;
+        transition: 0.3s;
     }
     
     .nav__links.show {
@@ -803,10 +814,6 @@ footer {
         position: relative;
     }
 
-    #myBtn {
-        visibility: hidden;
-    }
-
     .work, .work__project, .about {
         display: flex;
         flex-direction: column;
@@ -828,10 +835,6 @@ footer {
 
     .arrow {
         display: none;
-    }
-
-    .nav__link:hover, .logo a:hover, .footer__link:hover {
-        color: var(--blue);
     }
 }
 
@@ -888,7 +891,7 @@ footer {
         transform: translateY(-50%);
     }
     
-    .hamburger__menu, #myBtn {
+    .hamburger__menu {
         display: none;
     }
 
@@ -948,10 +951,6 @@ footer {
 
     .arrow {
         display: none;
-    }
-
-    .nav__link:hover, .logo a:hover, .footer__link:hover {
-        color: var(--blue);
     }
 }
 
@@ -1284,11 +1283,6 @@ footer {
         height: 460px; 
         position: relative;
     }
-
-    #myBtn {
-        display: none;
-        position: relative;
-    }
     
     .word {
         display: block;
@@ -1298,7 +1292,4 @@ footer {
         display: none;
     }
 
-    .nav__link:hover, .logo a:hover, .footer__link:hover {
-        color: var(--blue);
-    }
 }
