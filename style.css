@@ -277,15 +277,15 @@ img {
 }
 
 
-.project1 .project__header, .project1 .back a {
+.project1 .project__header {
     background-color: var(--green);
 }
 
-.project2 .project__header, .project2 .back a {
+.project2 .project__header {
     background-color: var(--yellow);
 }
 
-.project3 .project__header, .project3 .back a {
+.project3 .project__header {
     background-color: var(--light-blue);
 }
 
@@ -428,7 +428,7 @@ footer {
 
 .project__img .our-2 {
     background-color: #9DDCFF;
-    padding: 1em;
+    padding: 1em
 }
 
 .project__img img {
