@@ -74,15 +74,17 @@ images.forEach(image => {
     });
 });
 
-closeButton.addEventListener('click', () => {
-    fullscreenOverlay.style.display = 'none';
-    body.classList.remove('no-scroll');
-});
-
-// Hide the fullscreen overlay when clicking outside the image
-fullscreenOverlay.addEventListener('click', (e) => {
-    if (e.target === fullscreenOverlay) {
+if (closeButton && fullscreenOverlay) {
+    closeButton.addEventListener('click', () => {
         fullscreenOverlay.style.display = 'none';
         body.classList.remove('no-scroll');
-    }
-});
+    });
+
+    fullscreenOverlay.addEventListener('click', (e) => {
+        if (e.target === fullscreenOverlay) {
+            fullscreenOverlay.style.display = 'none';
+            body.classList.remove('no-scroll');
+        }
+    });
+}
+
