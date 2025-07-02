@@ -2,46 +2,14 @@
 
 A responsive portfolio website built from a Figma design provided by the client.
 
-## Features
-
-- Fully responsive design
-- Clean layout and modern styling
-- Built with HTML, CSS, and JavaScript
-- Adjusted design to be mobile friendly
-- Smooth scroll navigation
-
-## Screenshots
-
-### Figma Design (Reference)
-
-![Figma Design](./images/screenshots/Figma.png)
-
-### Home Page - Hero Section
-
-![Hero section](./images/screenshots/Home-1.png)
-
-### Home Page - Projects Preview
-
-![Projects preview 1](./images/screenshots/Home-2.png)
-![Projects preview 2](./images/screenshots/Home-3.png)
-
-### Project Page - Detailed View
-
-![Project detail](./images/screenshots/Project-3.png)
-
-### About Section
-
-![About section](./images/screenshots/About-1.png)
-
 ## Demo
 
-[Live Site](http://tranjohn.com/)
+[View My Version (GitHub Pages)](https://anthphan.github.io/john/)
+_This is the deployed version of the site I built. The original client site is no longer live._
 
 ## About the Project
 
-# Client Portfolio Website
-
-A responsive portfolio website built from a Figma design provided by the client.
+This site was built for a client based on a custom Figma design. It was used for about a year before the client decided to explore creating their own version. It showcases my ability to turn a design into a clean, fully responsive website.
 
 ## Features
 
@@ -55,29 +23,34 @@ A responsive portfolio website built from a Figma design provided by the client.
 
 ### Figma Design (Reference)
 
+_Original design provided by the client in Figma_
 ![Figma Design](./images/screenshots/Figma.png)
 
 ### Home Page - Hero Section
 
-![screenshot](./images/screenshots/Home-1.png)
+_Intro section with logo and navigation_
+![Hero Section](./images/screenshots/Home-1.png)
 
 ### Home Page - Projects Preview
 
-![screenshot](./images/screenshots/Home-2.png)
-![screenshot](./images/screenshots/Home-3.png)
+_Showcase of recent work, further down the page_
+![Projects Preview 1](./images/screenshots/Home-2.png)
+![Projects Preview 3](./images/screenshots/Home-3.png)
 
 ### Project Page - Detailed View
 
-![screenshot](./images/screenshots/Project-3.png)
+_Expanded view of an individual project_
+![Project Detail 3](./images/screenshots/Project-3.png)
 
 ### About Section
 
-![screenshot](./images/screenshots/About-1.png)
+_Bio and personal background_
+![About Section](./images/screenshots/About-1.png)
 
-## Demo
+### Mobile View
 
-[View My Version (GitHub Pages)](https://anthphan.github.io/john/)
-
-## About the Project
-
-This site was built for a client based on a custom Figma design. It was used for about a year before the client decided to explore creating their own version. It showcases my ability to turn a design into a clean, fully responsive website.
+_Responsive layout for smaller screens_
+![Mobile - Hero](./images/screenshots/Mobile-1.png)
+![Mobile - Navigation](./images/screenshots/Mobile-2.png)
+![Mobile - Projects](./images/screenshots/Mobile-3.png)
+![Mobile - About](./images/screenshots/Mobile-About.png)
