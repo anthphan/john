@@ -53,10 +53,6 @@ _Responsive layout for smaller screens_
 
 <p>
   <img src="./images/screenshots/Mobile-1.png" width="220"/>
-  <img src="./images/screenshots/Mobile-2.png" width="220"/>
   <img src="./images/screenshots/Mobile-3.png" width="220"/>
-</p>
-
-<p>
   <img src="./images/screenshots/Mobile-About.png" width="220"/>
 </p>
