@@ -50,7 +50,13 @@ _Bio and personal background_
 ### Mobile View
 
 _Responsive layout for smaller screens_
-![Mobile - Hero](./images/screenshots/Mobile-1.png)
-![Mobile - Navigation](./images/screenshots/Mobile-2.png)
-![Mobile - Projects](./images/screenshots/Mobile-3.png)
-![Mobile - About](./images/screenshots/Mobile-About.png)
+
+<p>
+  <img src="./images/screenshots/Mobile-1.png" width="220"/>
+  <img src="./images/screenshots/Mobile-2.png" width="220"/>
+  <img src="./images/screenshots/Mobile-3.png" width="220"/>
+</p>
+
+<p>
+  <img src="./images/screenshots/Mobile-About.png" width="220"/>
+</p>
